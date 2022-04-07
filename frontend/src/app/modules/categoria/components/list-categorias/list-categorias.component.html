@@ -1,0 +1,25 @@
+<p-card [header]="'Categorias'">
+
+    <p-table [value]="categorias">
+        <ng-template pTemplate="header">
+            <tr>
+                <th>Título</th>
+                <th>Descrição</th>
+                <th>idade</th>
+                <th>Peso início</th>
+                <th>Peso Limite</th>
+            </tr>
+        </ng-template>
+    
+        <ng-template pTemplate="body" let-categoria>
+            <tr>
+                <td value="titulo">{{categoria.titulo}}</td>
+                <td value="descricao">{{categoria.descricao}}</td>
+                <td value="idade">{{categoria.idade}}</td>
+                <td value="pesoInicio">{{categoria.pesoInicio}}</td>
+                <td value="pesoLimite">{{categoria.pesoLimite}}</td>
+            </tr>
+        </ng-template>
+    </p-table>
+    
+</p-card>

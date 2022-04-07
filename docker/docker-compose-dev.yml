@@ -1,0 +1,6 @@
+version: '2'
+services:
+  web:
+    extends:
+      file: postgresql.yml
+      service: atleta-postgres

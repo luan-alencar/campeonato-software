@@ -1,0 +1,10 @@
+version: '2'
+services:
+  atleta-postgres:
+    image: postgres:10-alpine
+    environment:
+      - POSTGRES_USER=atletaservice
+      - POSTGRES_PASSWORD=atletaservice
+      - POSTGRES_DB=atletaservice
+    ports:
+      - 5432:5432
