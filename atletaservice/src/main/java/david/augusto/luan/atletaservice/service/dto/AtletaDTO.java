@@ -14,4 +14,5 @@ public class AtletaDTO  implements Serializable {
     private Double altura;
     private Double peso;
     private Boolean adm;
+    private CategoriaDTO categoria;
 }

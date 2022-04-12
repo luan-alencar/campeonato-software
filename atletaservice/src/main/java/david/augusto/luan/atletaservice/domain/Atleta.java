@@ -17,6 +17,7 @@ public class Atleta implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
+
     private String nome;
     private String cpf;
     private String rg;
@@ -25,4 +26,7 @@ public class Atleta implements Serializable {
     private Double altura;
     private Double peso;
     private Boolean adm;
+
+    @ManyToOne
+    private Categoria categoria;
 }
