@@ -1,13 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { CategoriaModule } from './categoria.module';
-import { ListCategoriasComponent } from './components/list-categorias/list-categorias.component';
+import { ConsultarCategoriaComponent } from './components/consultar-categoria/consultar-categoria.component';
 
 
 const routes: Routes = [
   {
     path: '',
-    component: ListCategoriasComponent
+    component: ConsultarCategoriaComponent
   }
 ];
 
