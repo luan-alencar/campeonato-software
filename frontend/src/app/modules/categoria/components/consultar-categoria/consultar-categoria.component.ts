@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-consultar-categoria',
@@ -8,6 +8,9 @@ import { Component, Input, OnInit } from '@angular/core';
 export class ConsultarCategoriaComponent implements OnInit {
 
   @Input() categoria: string = 'Categorias';
+  
+  @Output() mensagemTitulo: string = 'Lista de categorias';
+
   constructor() { }
 
   ngOnInit(): void {

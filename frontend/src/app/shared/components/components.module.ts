@@ -6,6 +6,7 @@ import { PipeModule } from '@nuvem/angular-base';
 import { CaptchaModule } from 'primeng';
 import { PRIMENG_IMPORTS } from '../primeng-imports';
 import { TabelaPadraoComponent } from './tabela-padrao/tabela-padrao.component';
+import { TabelaDinamicaComponent } from './tabela-dinamica/tabela-dinamica.component';
 
 
 
@@ -13,6 +14,7 @@ import { TabelaPadraoComponent } from './tabela-padrao/tabela-padrao.component';
   declarations: [
     TabelaPadraoComponent,
     CardComponent,
+    TabelaDinamicaComponent,
   ],
   imports: [
     CommonModule,
