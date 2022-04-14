@@ -24,7 +24,7 @@
                     {{col.cabecalho}}
                     <p-sortIcon [field]="col.parametroOrdenacao"></p-sortIcon>
                 </th>
-                <th>Situação</th>
+                
                 <th>Ações</th>
             </tr>
         </ng-template>
@@ -37,11 +37,35 @@
                         {{coluna[col.parametro] | date:'dd/MM/yyyy'}}
                     </div>
                     <ng-template #colunaPadrao>
-                        <div class="p-d-flex p-jc-center alinhamento">
-                            {{coluna[col.parametro] | dinamico: col.mascara}}
-                        </div>
                     </ng-template>
                 </td>
+                <td>
+                    <div class="p-d-flex p-jc-center">
+                        <div *ngIf="situacaoIconeCustomizados" [pTooltip]="toolTipVisualizar">
+                            <a (click)="cliqueVisualizar.emit(coluna.id)">
+                                <i class="icone-preto fas fa-book-open livro-cnct"></i>
+                            </a>
+                        </div>                   
+                        <div *ngIf="exibirBotaoEditar" [pTooltip]="toolTipAlterar">
+                            <a (click)="cliqueEditar.emit(coluna.id)">
+                                <i class="icone-azul fas fa-pen"></i>
+                            </a>
+                        </div>
+                        <div *ngIf="exibirBotaoExcluir">
+                            <a (click)="cliqueRemover.emit(coluna.id)" [pTooltip]="toolTipExcluir">
+                                <i class="icone-vermelho p-ml-3 fas fa-trash"></i>
+                            </a>
+                        </div>
+                    </div>
+                </td>
             </tr>
+        </ng-template>
+    
+        <ng-template pTemplate="paginatorright">
+            <div class="p-d-flex p-ai-center">
+                <span class="total-registros">
+                    Total de registros {{resultado.totalElements}}
+                </span>
+            </div>
         </ng-template>
 </p-table>

@@ -1,0 +1,26 @@
+<app-card [titulo]="mensagemTitulo">
+    <br>
+    <form [formGroup]="formCategoria">
+
+        <div class="p-fluid p-formgrid p-grid">
+            <div class="p-field p-col-12 p-md-6 ui-float-label">
+                <input id="float-input" class="input" styleClass="p-d-block ui-state-error" type="text" required
+                    [(ngModel)]="categoria.titulo" formControlName="titulo" pInputText />
+                <label for="float-input" class="label">Titulo da categoria:*</label>
+            </div>
+
+            <div class="p-field p-col-12 p-md-6 ui-float-label">
+                <input id="float-input" class="input " type="text" required [(ngModel)]="categoria.descricao"
+                    formControlName="descricao" pInputText />
+                <label for="float-input" class="label">Descrição do categoria:*</label>
+
+            </div>
+
+        </div>
+
+    </form>
+
+    <p-confirmDialog header="Confirmation" icon="pi pi-exclamation-triangle"></p-confirmDialog>
+    <button (click)="salvar()" pButton type="button" [label]="edicao ? 'Editar' : 'Cadastrar'" ></button>
+
+</app-card>

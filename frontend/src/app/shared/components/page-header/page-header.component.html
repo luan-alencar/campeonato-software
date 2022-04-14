@@ -1,0 +1,12 @@
+<div class="row mb-4">
+    <div class="col-md-9">
+        <h1 class="col-md-9">
+            {{tituloPagina}}
+        </h1>
+    </div>
+    <div *ngIf="mostrarBotao" class="col-md-3 text-ri">
+        <a [routerLink]="linkBotao" class="btn" [ngClas]="classeBotao">
+            {{textoBotao}}
+        </a>
+    </div>
+</div>

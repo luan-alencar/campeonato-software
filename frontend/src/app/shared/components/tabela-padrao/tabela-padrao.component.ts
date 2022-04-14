@@ -25,6 +25,18 @@ export class TabelaPadraoComponent {
   @Output() cliqueRemover = new EventEmitter<number>();
   @Output() exportar = new EventEmitter<string>();
 
+  @Input() situacaoIconeCustomizados = false;
+  @Input() exibirBotaoHistorico = false;
+  @Input() toolTipInativar: string;
+  @Input() toolTipAlterar: string;
+  @Input() toolTipVisualizar: string;
+  @Input() toolTipExcluir: string;
+
+
+  @Output() cliqueVisualizar = new EventEmitter();
+  @Output() cliqueVisualizarHistorico = new EventEmitter();
+
+
   nenhumRegistroCadastrado = 'Nenhum registro cadastrado';
 
   constructor(private injector: Injector) {}

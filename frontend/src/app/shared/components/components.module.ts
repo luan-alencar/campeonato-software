@@ -7,6 +7,8 @@ import { CaptchaModule } from 'primeng';
 import { PRIMENG_IMPORTS } from '../primeng-imports';
 import { TabelaPadraoComponent } from './tabela-padrao/tabela-padrao.component';
 import { TabelaDinamicaComponent } from './tabela-dinamica/tabela-dinamica.component';
+import { PageHeaderComponent } from './page-header/page-header.component';
+import { CardAdicionarComponent } from './card-adicionar/card-adicionar.component';
 
 
 
@@ -15,6 +17,8 @@ import { TabelaDinamicaComponent } from './tabela-dinamica/tabela-dinamica.compo
     TabelaPadraoComponent,
     CardComponent,
     TabelaDinamicaComponent,
+    PageHeaderComponent,
+    CardAdicionarComponent
   ],
   imports: [
     CommonModule,
@@ -27,6 +31,8 @@ import { TabelaDinamicaComponent } from './tabela-dinamica/tabela-dinamica.compo
   exports: [
     TabelaPadraoComponent,
     CardComponent,
+    PageHeaderComponent,
+    CardAdicionarComponent
   ]
 })
 export class ComponentsModule { }

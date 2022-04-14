@@ -3,11 +3,13 @@ import { Routes, RouterModule } from '@angular/router';
 import { DiarioErrosComponent } from './components/diario-erros/diario-erros.component';
 import { LoginSuccessComponent } from '@nuvem/angular-base';
 import { CategoriaModule } from './modules/categoria/categoria.module';
+import { AtletasModule } from './modules/atletas/atletas.module';
 
 const routes: Routes = [
-    { path: 'diario-erros', component: DiarioErrosComponent, data: { breadcrumb: 'Diário de Erros'} },
-    { path: 'categorias', loadChildren: ()=> CategoriaModule },
-    { path: 'login-success', component: LoginSuccessComponent }
+  { path: 'diario-erros', component: DiarioErrosComponent, data: { breadcrumb: 'Diário de Erros' } },
+  { path: 'categorias', loadChildren: () => CategoriaModule },
+  { path: 'atletas', loadChildren: () => AtletasModule },
+  { path: 'login-success', component: LoginSuccessComponent }
 ];
 
 @NgModule({

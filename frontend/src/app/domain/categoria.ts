@@ -6,6 +6,8 @@ export class Categoria {
     idade: number;
     pesoInicio: number;
     pesoLimite: number;
-
+    quantidadeVagas: number;
+    quantidadeAtletas: number;
+    // TODO - lista de atletas
     constructor() {}
 }

@@ -1,3 +1,20 @@
 <app-card [titulo]="mensagemTitulo">
-    <app-tabela-padrao></app-tabela-padrao>
+    
+    <div class="p-d-flex p-jc-end">
+        <button class="p-ml-2" type="button" (click)="mostrarDialog()" pButton label="Cadastrar Categoria"></button>
+    </div>
+    
+    <p-dialog header="Title" [(visible)]="exibirDialog">
+        <app-form-categoria
+            [categoria]="categoria"
+            [edicao]="formularioEdicao"
+            (categoriaSalva)="fecharDialog($event)"
+        ></app-form-categoria>
+    </p-dialog>
+
+<app-tabela-padrao
+    #tabela [colunas]="colunasTabela" 
+    (carregarItens)="carregarCategorias()"
+></app-tabela-padrao>
+
 </app-card>
